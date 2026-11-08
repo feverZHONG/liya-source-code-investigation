@@ -30,7 +30,7 @@ curl -s https://api.github.com/repos/{owner}/{repo}/releases/latest
 
 - `topics` 字段直接暴露项目自我定位，比 description 诚实
 - **有独立 CLI crate/目录**（如 `src-tauri/omniget-cli/`）就进去读它的 `Cargo.toml`/`package.json` + `src/main.rs`——入口文件通常几百字节，全读
-- 有 agent 集成（`claude-plugin/skills/*/SKILL.md`、`INSTALL.md`）**一定读**：作者自己写的「依赖什么、失败怎么办」是最诚实的可用性文档
+- 有 agent 集成（`claude-plugin/skills/*/SKILL.md`、「INSTALL.md」）**一定读**：作者自己写的「依赖什么、失败怎么办」是最诚实的可用性文档
 - ⚠️ `raw.githubusercontent` 偶发空响应（本次 reporter.rs 首次拿空、重试即成功）——**失败重试一次再下结论**，别当文件不存在
 - 管道进 python 的写法会被安全扫描标记（可 auto-approve）：先 `-o /tmp/x.json` 再本地读，更干净
 
